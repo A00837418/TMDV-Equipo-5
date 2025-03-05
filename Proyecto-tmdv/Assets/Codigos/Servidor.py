@@ -7,7 +7,10 @@ GRID_WIDTH = 33  # Ancho de la matriz
 GRID_HEIGHT = 22  # Alto de la matriz
 
 # Definir obstáculos dentro del nuevo tamaño de la matriz
-OBSTACLES = {(2,2),(3,2),(4,2),(5,2),(6,2),(7,2),(8,2),(9,2),(10,2),(11,2),(12,2),}
+OBSTACLES = {(2,2),(3,2),(4,2),(5,2),(6,2),(7,2),(8,2),(9,2),(10,2),(11,2),(12,2),(13,2),
+             (2,4),(3,4),(4,4),(5,4),(6,4),(7,4),(8,4),(9,4),(10,4),(11,4),(12,4),(13,4),
+             (2,6),(3,6),(4,6),(5,6),(6,6),(7,6),(8,6),(9,6),(10,6),(11,6),(12,6),(13,6),
+             (2,8),(3,8),(4,8),(5,8),(6,8),(7,8),(8,8),(9,8),(10,8),(11,8),(12,8),(13,8)}
 
 # Algoritmo A* para encontrar la mejor ruta
 def astar(start, goal):
@@ -55,9 +58,9 @@ def start_server():
         print("Conectado con Unity:", addr)
 
         # Generar rutas en la nueva matriz
-        path1 = astar((0, 0), (32, 21))
-        path2 = astar((32, 21), (16, 0))
-        path3 = astar((16, 0), (0, 0))
+        path1 = astar((0, 0), (9,5))
+        path2 = astar((9,5), (7,9))
+        path3 = astar((7,9), (0, 0))
 
         if not path1 or not path2 or not path3:
             print("⚠️ No se pudo encontrar una ruta válida")

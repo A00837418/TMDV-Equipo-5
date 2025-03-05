@@ -48,7 +48,7 @@ public class PythonClient : MonoBehaviour
 
                     foreach (var coord in pathData.path)
                     {
-                        movementQueue.Enqueue(new Vector3(coord[0], 6.5f, coord[1])); // ✅ Ajustar Y según necesidad
+                        movementQueue.Enqueue(new Vector3(coord[0], 10.3f, coord[1])); // ✅ Ajustar Y según necesidad
                     }
                 }
                 else
